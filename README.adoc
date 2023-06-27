@@ -1,0 +1,8 @@
+# Red Hat JBoss Web Server 6.0 container image
+
+Components are available in the tomcat10 directory.
+
+# License
+
+See link:LICENSE[LICENSE] file.
+

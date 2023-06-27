@@ -1,0 +1,24 @@
+schema_version: 1
+
+name: jws-unpack-tomcat10
+version: "1.0"
+artifacts:
+    - name: jws-6.0.0.DR2.1-application-server.zip
+      target: jws-6.0.0-application-server.zip
+      description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=90341&product=webserver&version=&downloadType=distributions"
+      md5: 8a61be026ca36e9184236122f392d301
+    - name: jws-6.0.0.DR2.1-optional-native-components-RHEL8-ppc64le.zip
+      target: jws-6.0.0-optional-native-components-RHEL8-ppc64le.zip
+      md5: 0f8dd0cf99ddb30b332390e22a2135b5
+    - name: jws-6.0.0.DR2.1-optional-native-components-RHEL8-s390x.zip
+      target: jws-6.0.0-optional-native-components-RHEL8-s390x.zip
+      md5: 89dc786eef22370b170483805273cc36
+    - name: jws-6.0.0.DR2.1-optional-native-components-RHEL8-aarch64.zip 
+      target: jws-6.0.0-optional-native-components-RHEL8-aarch64.zip
+      md5: af10b6c36452747fe88c57b50d0dece4
+    - name: jws-6.0.0.DR2.1-optional-native-components-RHEL8-x86_64.zip
+      target: jws-6.0.0-optional-native-components-RHEL8-x86_64.zip
+      description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=90361&product=webserver&version=&downloadType=distributions"
+      md5: fb2dd1d2a99eeeb59bf40b3488c4359e
+execute:
+    - script: run

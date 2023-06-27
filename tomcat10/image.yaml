@@ -1,0 +1,93 @@
+schema_version: 1
+
+name: "jboss-webserver-5/webserver60-openjdk17-tomcat10-rhel8"
+description: "Red Hat JBoss Web Server 5.7 Tomcat 9 container image"
+version: "6.0.0"
+from: "registry.redhat.io/ubi8/ubi:latest"
+labels:
+    - name: "com.redhat.component"
+      value: "jboss-webserver-5-webserver60-openjdk17-tomcat10-rhel8-container"
+    - name: "org.jboss.product"
+      value: "webserver-tomcat10"
+    - name: "org.jboss.product.version"
+      value: "6.0.0"
+    - name: "org.jboss.product.webserver-tomcat10.version"
+      value: "6.0.0"
+    - name: "org.jboss.deployments-dir"
+      value: "/opt/jws-6.0/tomcat/webapps"
+    - name: "com.redhat.deployments-dir"
+      value: "/opt/jws-6.0/tomcat/webapps"
+    - name: "com.redhat.deployments-dir"
+      value: "/opt/jws-6.0/tomcat/webapps"
+    - name: "com.redhat.dev-mode"
+      value: "DEBUG:true"
+      description: "Environment variable used to enable development mode (debugging).  A value of true will enable development mode."
+    - name: "com.redhat.dev-mode.port"
+      value: "JPDA_ADDRESS:8000"
+      description: "Environment variable used to specify the debug port.  If not set, the default Tomcat debug port will be used (8000).  Only applicable when development mode is enabled."
+envs:
+    - name: "JBOSS_PRODUCT"
+      value: "webserver"
+    - name: "JBOSS_WEBSERVER_VERSION"
+      value: "6.0.0"
+    - name: "PRODUCT_VERSION"
+      value: "6.0.0"
+    - name: "TOMCAT_VERSION"
+      value: "10.1.8"
+    - name: "JWS_HOME"
+      value: "/opt/jws-6.0/tomcat"
+    - name: "CATALINA_OPTS"
+      value: "-Djava.security.egd=file:/dev/./urandom"
+    - name: "JPDA_ADDRESS"
+      value: "8000"
+      description: "Specify the port to use for debugging. If not set, the default Tomcat debug port will be used (8000).  Only applicable when development mode is enabled."
+    - name: DEBUG
+      example: false
+      description: "Specify true to enable development mode (debugging)."
+ports:
+    - value: 8080
+    - value: 8000
+      expose: false
+modules:
+      repositories:
+          - name: cct_module
+            git:
+                url: https://github.com/jboss-openshift/cct_module.git
+                ref: 0.45.5
+          - path: modules
+      install:
+          - name: jboss.container.openjdk.jdk
+            version: "17"
+          - name: jws-unpack-tomcat10
+            version: "1.0"
+          - name: jws-chown
+            version: "1.0"
+          - name: jws-debugging
+            version: "1.0"
+          - name: jws-disable-ajp
+            version: "1.0"
+packages:
+      content_sets_file: content_sets_rhel8.yml
+      install:
+          - apr-util
+
+run:
+      user: 185
+      cmd:
+          - "/opt/jws-6.0/tomcat/bin/catalina.sh"
+          - "run"
+osbs:
+    repository:
+        name: containers/jboss-webserver-openjdk17-tomcat10
+        branch: jws-6.0-rhel-8
+    configuration:
+        container:
+            compose:
+                pulp_repos: true
+            platforms:
+                only:
+                    - x86_64
+                    - s390x
+                    - ppc64le
+                    - aarch64  
+
