@@ -1,12 +1,12 @@
 schema_version: 1
 
-name: "jboss-webserver-5/webserver60-openjdk17-tomcat10-rhel8"
-description: "Red Hat JBoss Web Server 5.7 Tomcat 9 container image"
+name: "jboss-webserver-6/webserver60-openjdk17-tomcat10-rhel8"
+description: "Red Hat JBoss Web Server 6.0 Tomcat 10 container image"
 version: "6.0.0"
 from: "registry.redhat.io/ubi8/ubi:latest"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-5-webserver60-openjdk17-tomcat10-rhel8-container"
+      value: "jboss-webserver-6-webserver60-openjdk17-tomcat10-rhel8-container"
     - name: "org.jboss.product"
       value: "webserver-tomcat10"
     - name: "org.jboss.product.version"
