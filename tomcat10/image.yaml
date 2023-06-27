@@ -50,10 +50,10 @@ ports:
       expose: false
 modules:
       repositories:
-          - name: cct_module
+          - name: openjdk
             git:
-                url: https://github.com/jboss-openshift/cct_module.git
-                ref: 0.45.5
+                url: https://github.com/jboss-container-images/openjdk
+                ref: ubi8
           - path: modules
       install:
           - name: jboss.container.openjdk.jdk
