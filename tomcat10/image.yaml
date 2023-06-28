@@ -61,11 +61,11 @@ modules:
           - name: jws-unpack-tomcat10
             version: "1.0"
           - name: jws-chown
-            version: "1.0"
+            version: "1.1"
           - name: jws-debugging
-            version: "1.0"
+            version: "1.1"
           - name: jws-disable-ajp
-            version: "1.0"
+            version: "1.1"
 packages:
       content_sets_file: content_sets_rhel8.yml
       install:
