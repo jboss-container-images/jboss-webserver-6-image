@@ -3,23 +3,23 @@ schema_version: 1
 name: jws-unpack-tomcat10
 version: "1.0"
 artifacts:
-    - name: jws-6.0.0.DR5.1-application-server.zip
+    - name: jws-6.0.0.CR2-application-server.zip
       target: jws-6.0.0-application-server.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=90341&product=webserver&version=&downloadType=distributions"
-      md5: 7019047fc9e819270a4ecdc4a4c0994a
-    - name: jws-6.0.0.DR5.1-optional-native-components-RHEL8-ppc64le.zip
-      target: jws-6.0.0-optional-native-components-RHEL8-ppc64le.zip
-      md5: f511bc71556a70d6d231dfc7e29540a8
-    - name: jws-6.0.0.DR5.1-optional-native-components-RHEL8-s390x.zip
-      target: jws-6.0.0-optional-native-components-RHEL8-s390x.zip
-      md5: 899f8c3694ab3b0b25d2e1b619cceeb3
-    - name: jws-6.0.0.DR5.1-optional-native-components-RHEL8-aarch64.zip 
+      md5: c2e3ed15bd75a3bba3afce31dab81e12
+    - name: jws-6.0.0.CR2-optional-native-components-RHEL8-aarch64.zip 
       target: jws-6.0.0-optional-native-components-RHEL8-aarch64.zip
-      md5: a9af016e2d6db5f0bbcce70a2f52caa1
-    - name: jws-6.0.0.DR2.1-optional-native-components-RHEL8-x86_64.zip
+      md5: 7be20a2c497dd595b07ea94e7f0eaa40 
+    - name: jws-6.0.0.CR2-optional-native-components-RHEL8-ppc64le.zip
+      target: jws-6.0.0-optional-native-components-RHEL8-ppc64le.zip
+      md5: b511b529c0fb2789e29c7825355a24c3
+    - name: jws-6.0.0.CR2-optional-native-components-RHEL8-s390x.zip
+      target: jws-6.0.0-optional-native-components-RHEL8-s390x.zip
+      md5: 5556d9aa6081396cf5e8ea0cf51e4359
+    - name: jws-6.0.0.CR2-optional-native-components-RHEL8-x86_64.zip
       target: jws-6.0.0-optional-native-components-RHEL8-x86_64.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=90361&product=webserver&version=&downloadType=distributions"
-      md5: 587c2c43bbeaf88c3a0f7e8d238ac3e7
+      md5: 04ad23a67fe1eecd32c490d1deb1f6d3
 packages:
   install:
     - unzip
