@@ -3,23 +3,23 @@ schema_version: 1
 name: jws-unpack-tomcat10
 version: "1.0"
 artifacts:
-    - name: jws-6.0.0.CR3-application-server.zip
+    - name: jws-6.0.0.CR4-application-server.zip
       target: jws-6.0.0-application-server.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=90341&product=webserver&version=&downloadType=distributions"
-      md5: 4da32dc1de725841c825b75d72a86a3b
-    - name: jws-6.0.0.CR3-optional-native-components-RHEL8-aarch64.zip 
+      md5: e9bd3053357a91eacaf811509a2d6a78
+    - name: jws-6.0.0.CR4-optional-native-components-RHEL8-aarch64.zip
       target: jws-6.0.0-optional-native-components-RHEL8-aarch64.zip
-      md5: 28826633dce2e41adc6f239036ad9702
-    - name: jws-6.0.0.CR3-optional-native-components-RHEL8-ppc64le.zip
+      md5: 3997e19edca715bec1c18d3cb7fbc2a8
+    - name: jws-6.0.0.CR4-optional-native-components-RHEL8-ppc64le.zip
       target: jws-6.0.0-optional-native-components-RHEL8-ppc64le.zip
-      md5: e8970d108309f783b73db07bb3d00631
-    - name: jws-6.0.0.CR3-optional-native-components-RHEL8-s390x.zip
+      md5: 431bd89c87e3352eab3fa776c430660b
+    - name: jws-6.0.0.CR4-optional-native-components-RHEL8-s390x.zip
       target: jws-6.0.0-optional-native-components-RHEL8-s390x.zip
-      md5: 45de6628b5e61610dbb3f6da8d88faaa
-    - name: jws-6.0.0.CR3-optional-native-components-RHEL8-x86_64.zip
+      md5: 396b464e5ec0939dfea01a24b0a4ee6b
+    - name: jws-6.0.0.CR4-optional-native-components-RHEL8-x86_64.zip
       target: jws-6.0.0-optional-native-components-RHEL8-x86_64.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=90361&product=webserver&version=&downloadType=distributions"
-      md5: 916723ed2ba9abbd2433107f36a0a143
+      md5: 263bf387adeb7d315e91a42f1235ffd4
 packages:
   install:
     - unzip
