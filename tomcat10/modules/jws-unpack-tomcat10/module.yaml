@@ -20,6 +20,9 @@ artifacts:
       target: jws-6.0.0-optional-native-components-RHEL8-x86_64.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=90361&product=webserver&version=&downloadType=distributions"
       md5: ab3d5bc88505fc34be766f5ff0051e2e
+    - name: jws-6.0.1.CR2-application-server.zip
+      target: jws-6.0.1-application-server.zip
+      md5: f6090e27e1c7c080d3c4717207ada2a0
 packages:
   install:
     - unzip
