@@ -10,4 +10,4 @@ modules:
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk21-tomcat10
-            branch: jws-6.0-dev-rhel-8
+            branch: jws-6.1-dev-rhel-8
