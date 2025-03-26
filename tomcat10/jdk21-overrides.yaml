@@ -1,7 +1,7 @@
-name: "jboss-webserver-6/webserver60-openjdk21-tomcat10-rhel8"
+name: "jboss-webserver-6/webserver61-openjdk21-tomcat10-rhel8"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-6-webserver60-openjdk21-tomcat10-rhel8-container"
+      value: "jboss-webserver-6-webserver61-openjdk21-tomcat10-rhel8-container"
 modules:
       install:
           - name: jboss.container.openjdk.jdk
