@@ -1,12 +1,12 @@
 schema_version: 1
 
-name: "jboss-webserver-6/webserver61-openjdk17-tomcat10-rhel8"
+name: "jboss-webserver-6/webserver61-openjdk17-tomcat10-rhel9"
 description: "Red Hat JBoss Web Server 6.1 Tomcat 10 container image"
 version: "6.1.2"
-from: "registry.redhat.io/ubi8/ubi:latest"
+from: "registry.access.redhat.com/ubi9/ubi-minimal"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-6-webserver61-openjdk17-tomcat10-rhel8-container"
+      value: "jboss-webserver-6-webserver61-openjdk17-tomcat10-rhel9-container"
     - name: "org.jboss.product"
       value: "webserver-tomcat10"
     - name: "org.jboss.product.version"
@@ -52,8 +52,8 @@ modules:
       repositories:
           - name: openjdk
             git:
-                url: https://github.com/jboss-container-images/openjdk
-                ref: ubi8
+                url: https://github.com/rh-openjdk/redhat-openjdk-containers
+                ref: ubi9
           - path: modules
       install:
           - name: jboss.container.openjdk.jdk
@@ -69,7 +69,8 @@ modules:
           - name: jws-disable-ajp
             version: "1.1"
 packages:
-      content_sets_file: content_sets_rhel8.yml
+      manager: microdnf
+      content_sets_file: content_sets_rhel9.yml
       install:
           - apr-util
 
@@ -81,7 +82,7 @@ run:
 osbs:
     repository:
         name: containers/jboss-webserver-openjdk17-tomcat10
-        branch: jws-6.1-dev-rhel-8
+        branch: jws-6.1-dev-rhel-9
     configuration:
         container:
             compose:
