@@ -56,6 +56,8 @@ modules:
                 ref: ubi9
           - path: modules
       install:
+          - name: jboss.container.user
+            version: "2.0"
           - name: jboss.container.openjdk.jdk
             version: "17"
           - name: jws-unpack-tomcat10
