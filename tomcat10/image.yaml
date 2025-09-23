@@ -54,10 +54,14 @@ modules:
             git:
                 url: https://github.com/rh-openjdk/redhat-openjdk-containers
                 ref: ubi9
+          - name: wildfly-cekit-modules
+            git:
+                url: https://github.com/wildfly/wildfly-cekit-modules
+                ref: 0.33.0
           - path: modules
       install:
           - name: jboss.container.user
-            version: "2.0"
+            version: "2.0+jboss1"
           - name: jboss.container.openjdk.jdk
             version: "17"
           - name: jws-unpack-tomcat10
