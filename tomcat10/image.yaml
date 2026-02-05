@@ -1,24 +1,24 @@
 schema_version: 1
 
-name: "jboss-webserver-6/webserver61-openjdk17-tomcat10-rhel8"
-description: "Red Hat JBoss Web Server 6.1 Tomcat 10 container image"
-version: "6.1.3"
-from: "registry.redhat.io/ubi8/ubi:latest"
+name: "jboss-webserver-6/webserver62-openjdk17-tomcat10-rhel8"
+description: "Red Hat JBoss Web Server 6.2 Tomcat 10 container image"
+version: "6.2.0"
+from: "registry.redhat.io/ubi8/ubi"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-6-webserver61-openjdk17-tomcat10-rhel8-container"
     - name: "org.jboss.product"
       value: "webserver-tomcat10"
     - name: "org.jboss.product.version"
-      value: "6.1.3"
+      value: "6.2.0"
     - name: "org.jboss.product.webserver-tomcat10.version"
-      value: "6.1.3"
+      value: "6.2.0"
     - name: "org.jboss.deployments-dir"
-      value: "/opt/jws-6.1/tomcat/webapps"
+      value: "/opt/jws-6.2/tomcat/webapps"
     - name: "com.redhat.deployments-dir"
-      value: "/opt/jws-6.1/tomcat/webapps"
+      value: "/opt/jws-6.2/tomcat/webapps"
     - name: "com.redhat.deployments-dir"
-      value: "/opt/jws-6.1/tomcat/webapps"
+      value: "/opt/jws-6.2/tomcat/webapps"
     - name: "com.redhat.dev-mode"
       value: "DEBUG:true"
       description: "Environment variable used to enable development mode (debugging).  A value of true will enable development mode."
@@ -29,13 +29,13 @@ envs:
     - name: "JBOSS_PRODUCT"
       value: "webserver"
     - name: "JBOSS_WEBSERVER_VERSION"
-      value: "6.1.3"
+      value: "6.2.0"
     - name: "PRODUCT_VERSION"
-      value: "6.1.3"
+      value: "6.2.0"
     - name: "TOMCAT_VERSION"
-      value: "10.1.36"
+      value: "10.1.49"
     - name: "JWS_HOME"
-      value: "/opt/jws-6.1/tomcat"
+      value: "/opt/jws-6.2/tomcat"
     - name: "CATALINA_OPTS"
       value: "-Djava.security.egd=file:/dev/./urandom"
     - name: "JPDA_ADDRESS"
@@ -56,6 +56,8 @@ modules:
                 ref: ubi8
           - path: modules
       install:
+          - name: jboss.container.util.pkg-update
+            version: "1.0"
           - name: jboss.container.openjdk.jdk
             version: "17"
           - name: jws-unpack-tomcat10
@@ -76,12 +78,12 @@ packages:
 run:
       user: 185
       cmd:
-          - "/opt/jws-6.1/tomcat/bin/catalina.sh"
+          - "/opt/jws-6.2/tomcat/bin/catalina.sh"
           - "run"
 osbs:
     repository:
         name: containers/jboss-webserver-openjdk17-tomcat10
-        branch: jws-6.1-dev-rhel-8
+        branch: jws-6.2-dev-rhel-8
     configuration:
         container:
             compose:
