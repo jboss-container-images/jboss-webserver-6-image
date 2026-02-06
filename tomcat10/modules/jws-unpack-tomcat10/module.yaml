@@ -3,38 +3,23 @@ schema_version: 1
 name: jws-unpack-tomcat10
 version: "1.0"
 artifacts:
-    - name: jws-6.1.0.CR2.3-application-server.zip
-      target: jws-6.1.0-application-server.zip
+    - name: jws-6.2.0.CR1-application-server.zip
+      target: jws-6.2.0-application-server.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=90341&product=webserver&version=&downloadType=distributions"
-      md5: 154240274cd16bdbaa63d04f2eb7cb00
-    - name: jws-6.1.0.CR2.3-optional-native-components-RHEL9-aarch64.zip
-      target: jws-6.1.0-optional-native-components-RHEL9-aarch64.zip
-      md5: 5f6b5f84bfffcc4a64d98bcb1eb49af4
-    - name: jws-6.1.0.CR2.3-optional-native-components-RHEL9-ppc64le.zip
-      target: jws-6.1.0-optional-native-components-RHEL9-ppc64le.zip
-      md5: 376363d257335138c80befe60b5bd712
-    - name: jws-6.1.0.CR2.3-optional-native-components-RHEL9-s390x.zip
-      target: jws-6.1.0-optional-native-components-RHEL9-s390x.zip
-      md5: f27fb63c4677114ef1d04c48f0a7e462
-    - name: jws-6.1.0.CR2.3-optional-native-components-RHEL9-x86_64.zip
-      target: jws-6.1.0-optional-native-components-RHEL9-x86_64.zip
+      md5: 6efb199c922d009f16f4c1fb738ebf10
+    - name: jws-6.2.0.CR1-optional-native-components-RHEL9-aarch64.zip
+      target: jws-6.2.0-optional-native-components-RHEL9-aarch64.zip
+      md5: 9e1329b65c2288359bb6b5cdcebd0475
+    - name: jws-6.2.0.CR1-optional-native-components-RHEL9-ppc64le.zip
+      target: jws-6.2.0-optional-native-components-RHEL9-ppc64le.zip
+      md5: 26aed5899155cd1e5dcbe3e5bdd28357
+    - name: jws-6.2.0.CR1-optional-native-components-RHEL9-s390x.zip
+      target: jws-6.2.0-optional-native-components-RHEL9-s390x.zip
+      md5: 8d38b828a3290fef3f12251e59e92187
+    - name: jws-6.2.0.CR1-optional-native-components-RHEL9-x86_64.zip
+      target: jws-6.2.0-optional-native-components-RHEL9-x86_64.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=90361&product=webserver&version=&downloadType=distributions"
-      md5: 4ddbea0215e23e2e769e2aa2008e86b9
-    - name: jws-6.1.3.ER1-application-server.zip
-      target: jws-6.1.3-application-server.zip
-      md5: b93a17b10ada16053aa07583e4b90cc5
-    - name: jws-6.1.3.ER1-optional-native-components-RHEL9-aarch64.zip
-      target: jws-6.1.3-optional-native-components-RHEL9-aarch64.zip
-      md5: a323b15403342a55780aa0a8601e39c0
-    - name: jws-6.1.3.ER1-optional-native-components-RHEL9-ppc64le.zip
-      target: jws-6.1.3-optional-native-components-RHEL9-ppc64le.zip
-      md5: 5ddd2b527ae930d2a974862346ed11df
-    - name: jws-6.1.3.ER1-optional-native-components-RHEL9-s390x.zip
-      target: jws-6.1.3-optional-native-components-RHEL9-s390x.zip
-      md5: 5c89f77f4b0fe5dec275564dc2883a1c
-    - name: jws-6.1.3.ER1-optional-native-components-RHEL9-x86_64.zip
-      target: jws-6.1.3-optional-native-components-RHEL9-x86_64.zip
-      md5: bc4244cf60092a6f6797972827a41a97
+      md5: 8df7f6ef58b262519e6a4cdb4072e761
 packages:
   install:
     - unzip
