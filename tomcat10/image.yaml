@@ -71,7 +71,6 @@ modules:
           - name: jws-disable-ajp
             version: "1.1"
 packages:
-      content_sets_file: content_sets_rhel8.yml
       install:
           - apr-util
 
@@ -80,18 +79,3 @@ run:
       cmd:
           - "/opt/jws-6.2/tomcat/bin/catalina.sh"
           - "run"
-osbs:
-    repository:
-        name: containers/jboss-webserver-openjdk17-tomcat10
-        branch: jws-6.2-dev-rhel-8
-    configuration:
-        container:
-            compose:
-                pulp_repos: true
-            platforms:
-                only:
-                    - x86_64
-                    - s390x
-                    - ppc64le
-                    - aarch64  
-

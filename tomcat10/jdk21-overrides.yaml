@@ -6,8 +6,3 @@ modules:
       install:
           - name: jboss.container.openjdk.jdk
             version: "21"
-
-osbs:
-      repository:
-            name: containers/jboss-webserver-openjdk21-tomcat10
-            branch: jws-6.2-dev-rhel-8
