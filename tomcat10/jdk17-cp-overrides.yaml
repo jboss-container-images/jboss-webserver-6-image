@@ -1,4 +1,0 @@
-osbs:
-  repository:
-    name: containers/jboss-webserver-openjdk17-tomcat10
-    branch: jws-6.2-rhel-8
