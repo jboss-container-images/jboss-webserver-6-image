@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-webserver-6/webserver62-openjdk17-tomcat10-rhel8"
 description: "Red Hat JBoss Web Server 6.2 Tomcat 10 container image"
 version: "6.2.2"
-from: "registry.redhat.io/ubi8/ubi"
+from: "registry.access.redhat.com/ubi8/ubi"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-6-webserver62-openjdk17-tomcat10-rhel8-container"
