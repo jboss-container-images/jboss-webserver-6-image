@@ -121,14 +121,10 @@ ports:
       expose: false
 modules:
       repositories:
-          - name: openjdk
+          - name: redhat-openjdk-containers
             git:
-                url: https://github.com/jboss-container-images/openjdk
-                ref: ubi8
-          - name: cct_module
-            git:
-                  url: https://github.com/jboss-openshift/cct_module.git
-                  ref: 0.45.6
+                  url: git@github.com:rh-openjdk/redhat-openjdk-containers.git
+                  ref: ubi8
           - name: jboss-eap-modules
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-modules.git
@@ -157,7 +153,7 @@ modules:
             version: "3.8.17"
           - name: dynamic-resources
             version: "1.1"
-          - name: s2i-common
+          - name: jboss.container.maven.default # Replacement for s2i-common
           - name: os-jws-s2i
             version: "3.0"
           - name: jws6-conffiles
@@ -182,7 +178,7 @@ modules:
             version: "3.0"
           - name: os-jws-chmod
             version: "3.0"
-          - name: openshift-passwd
+          - name: jboss.container.user # Replacement for openshift-passwd module
           - name: jboss.container.util.logging.bash
           - name: os-eap-python
             version: "3.6"
