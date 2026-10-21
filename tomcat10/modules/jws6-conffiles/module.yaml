@@ -1,0 +1,8 @@
+schema_version: 1
+name: jws6-conffiles
+version: '1.0'
+description: Legacy jws6-conffiles script package.
+
+execute:
+- script: run
+  user: '185'
