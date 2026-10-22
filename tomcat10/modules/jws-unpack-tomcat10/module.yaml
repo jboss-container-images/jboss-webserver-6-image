@@ -1,7 +1,7 @@
 schema_version: 1
 
 name: jws-unpack-tomcat10
-version: "1.0"
+version: "1.1"
 artifacts:
   - name: jws-6.2.0-application-server.zip
     target: jws-6.2.0-application-server.zip
@@ -19,6 +19,11 @@ artifacts:
     target: jws-6.2.5-optional-native-components-RHEL8-x86_64.zip
     url: https://eu.artifactory.swg-devops.com/artifactory/rhh-team-jws-jbcs-generic-local/jws/6.2.5/jws-6.2.5-optional-native-components-RHEL8-x86_64.zip
     md5: 495cf3f3631b6a8bd1888ad7512458e9
+
+envs:
+  - name: "JWS_HOME"
+    value: "/opt/jws-6.2/tomcat"
+
 packages:
   install:
     - unzip
