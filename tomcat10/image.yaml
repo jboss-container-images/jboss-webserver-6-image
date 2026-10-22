@@ -135,8 +135,8 @@ modules:
                   ref: main
           - path: modules
       install:
-          - name: jboss.container.util.pkg-update
-            version: "1.0"
+#          - name: jboss.container.util.pkg-update
+#            version: "1.0"
           - name: jboss.container.openjdk.jdk
             version: "17"
           - name: jws-unpack-tomcat10
