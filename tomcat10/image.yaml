@@ -135,8 +135,8 @@ modules:
                   ref: main
           - path: modules
       install:
-          - name: jboss.container.util.pkg-update
-            version: "1.0"
+#          - name: jboss.container.util.pkg-update
+#            version: "1.0"
           - name: jboss.container.openjdk.jdk
             version: "17"
           - name: jws-unpack-tomcat10
@@ -164,10 +164,10 @@ modules:
             version: "3.0"
           - name: os-jws-hello
             version: "3.0"
-          - name: jboss.container.jolokia
-            version: "8.2"
-          - name: os-jws-jolokia
-            version: "3.0"
+#          - name: jboss.container.jolokia
+#            version: "8.2"
+#          - name: os-jws-jolokia
+#            version: "3.0"
           - name: os-jws-launch
             version: "3.0"
           - name: os-jws-https
@@ -188,8 +188,8 @@ modules:
             version: "1.1"
           - name: jboss.container.java.singleton-jdk
             version: "1.1"
-          - name: os-jws-prometheus
-            version: "3.0"
+#          - name: os-jws-prometheus
+#            version: "3.0"
 packages:
       install:
           - apr-util
