@@ -2,7 +2,6 @@
 # Unpack the JWS distribution, possibly patch it, move components into place,
 # then delete the rest
 set -e
-JWS_HOME=/opt/jws-6.2/tomcat
 ADDED_DIR=/tmp/artifacts
 GENERAL_ZIPS=$ADDED_DIR/jws-6.2.?-application-server.zip
 PLATFORM_ZIPS=$ADDED_DIR/jws-6.2.?-optional-native-components-RHEL?-$(uname -m).zip
