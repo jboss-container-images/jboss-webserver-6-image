@@ -37,6 +37,8 @@ labels:
       value: "image:///usr/local/s2i"
     - name: "maintainer"
       value: "szappis@redhat.com"
+    - name: "name"
+      value: "jboss-webserver-6/jws62-openjdk17-rhel8-openshift"
 envs:
     - name: "JBOSS_PRODUCT"
       value: "webserver"
