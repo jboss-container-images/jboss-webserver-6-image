@@ -166,8 +166,8 @@ modules:
             version: "3.0"
           - name: os-jws-hello
             version: "3.0"
-#          - name: jboss.container.jolokia
-#            version: "8.2"
+          - name: jboss.container.jolokia
+            version: "8.2"
 #          - name: os-jws-jolokia
 #            version: "3.0"
           - name: os-jws-launch
